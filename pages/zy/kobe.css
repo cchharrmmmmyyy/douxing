@@ -1,0 +1,699 @@
+/* ================================================
+   科比·布莱恩特 介绍页面 - 样式
+   ================================================ */
+
+/* ---------- 基础重置 & 全局 ---------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --kobe-gold: #f9a01b;
+    --kobe-purple: #552583;
+    --kobe-dark: #2c103d;
+    --kobe-light: #f4f4f9;
+    --kobe-gray: #c0a0d0;
+    --kobe-white: #ffffff;
+    --font-main: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background: linear-gradient(135deg, #2c103d 0%, #552583 40%, #3a1a5e 100%);
+    color: var(--kobe-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title span {
+    display: block;
+    font-size: 1rem;
+    color: var(--kobe-gold);
+    letter-spacing: 4px;
+    margin-top: 6px;
+}
+
+/* ================================================
+   第一部分：Header / 导航栏
+   ================================================ */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(44, 16, 61, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(249, 160, 27, 0.25);
+    transition: background 0.3s;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--kobe-gold);
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav a {
+    font-size: 0.95rem;
+    color: var(--kobe-light);
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+    transition: 0.25s;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--kobe-gold);
+    border-bottom-color: var(--kobe-gold);
+}
+
+/* ================================================
+   第二部分：Intro 英雄区
+   ================================================ */
+
+.intro-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0 60px;
+    background: linear-gradient(135deg, #2c103d 0%, #552583 50%, #1a0a2e 100%);
+    overflow: hidden;
+}
+
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 80% 20%, rgba(249, 160, 27, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.intro-text h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    background: linear-gradient(90deg, var(--kobe-gold), var(--kobe-white));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--kobe-gray);
+    margin-bottom: 24px;
+    letter-spacing: 2px;
+}
+
+.intro-text p {
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    color: #ccc;
+}
+
+/* 统计数据 */
+.intro-stats {
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat .num {
+    display: block;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--kobe-gold);
+    letter-spacing: 1px;
+}
+
+.stat .label {
+    font-size: 0.85rem;
+    color: var(--kobe-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 右侧人物图片 */
+.intro-image {
+    flex: 0 0 320px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-wrapper {
+    width: 260px;
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.intro-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(249, 160, 27, 0.25);
+    border: 2px solid rgba(249, 160, 27, 0.3);
+}
+
+/* ================================================
+   第三部分：职业生涯时间线
+   ================================================ */
+
+.career-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #1a0a2e 0%, #2c103d 50%, #552583 100%);
+}
+
+.timeline {
+    position: relative;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--kobe-gold), var(--kobe-purple));
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 48px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -40px;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    background: var(--kobe-dark);
+    border: 3px solid var(--kobe-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: var(--kobe-gold);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(249, 160, 27, 0.12);
+    border-radius: 12px;
+    padding: 20px 24px;
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    border-color: var(--kobe-gold);
+    background: rgba(249, 160, 27, 0.06);
+}
+
+.timeline-content h3 {
+    color: var(--kobe-gold);
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: #d0c0e0;
+    font-size: 0.95rem;
+}
+
+/* ================================================
+   第四部分：荣誉殿堂
+   ================================================ */
+
+.honors-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #552583 0%, #2c103d 50%, #1a0a2e 100%);
+}
+
+.honors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+}
+
+.honor-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(249, 160, 27, 0.1);
+    border-radius: 16px;
+    padding: 32px 20px;
+    text-align: center;
+    transition: 0.35s;
+    cursor: default;
+}
+
+.honor-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--kobe-gold);
+    box-shadow: 0 12px 32px rgba(249, 160, 27, 0.12);
+}
+
+.card-icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.honor-card h3 {
+    font-size: 1.15rem;
+    color: var(--kobe-white);
+    margin-bottom: 8px;
+}
+
+.honor-card p {
+    font-size: 0.88rem;
+    color: #c0a0d0;
+}
+
+/* ================================================
+   第五部分：曼巴精神 / 名言轮播
+   ================================================ */
+
+.quotes-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #1a0a2e 0%, #2c103d 50%, #552583 100%);
+}
+
+.quote-slider {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+}
+
+.quote-item {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.quote-item.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.quote-text {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: var(--kobe-white);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    quotes: "“" "”" "‘" "’";
+}
+
+.quote-text::before {
+    content: "“";
+    color: var(--kobe-gold);
+    font-size: 2.4rem;
+    line-height: 0;
+    vertical-align: -10px;
+    margin-right: 4px;
+}
+
+.quote-text::after {
+    content: "”";
+    color: var(--kobe-gold);
+    font-size: 2.4rem;
+    line-height: 0;
+    vertical-align: -6px;
+    margin-left: 4px;
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: var(--kobe-gold);
+    letter-spacing: 2px;
+}
+
+.quote-controls {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.quote-btn {
+    background: transparent;
+    border: 2px solid var(--kobe-gold);
+    color: var(--kobe-gold);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quote-btn:hover {
+    background: var(--kobe-gold);
+    color: #2c103d;
+}
+
+/* ================================================
+   图片占位符样式（通用）
+   ================================================ */
+
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.4s;
+}
+
+.placeholder-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 28px rgba(249, 160, 27, 0.2);
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px dashed rgba(249, 160, 27, 0.3);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #d0b0e0;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-placeholder:hover {
+    border-color: var(--kobe-gold);
+    background: rgba(249, 160, 27, 0.06);
+}
+
+.placeholder-icon {
+    font-size: 2.4rem;
+}
+
+.placeholder-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.placeholder-text small {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    display: block;
+    margin-top: 2px;
+}
+
+/* ---- ② 生涯横幅 ---- */
+.career-banner-img {
+    max-width: 720px;
+    height: 200px;
+    margin: -20px auto 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.career-banner-img .placeholder-img,
+.banner-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+/* ---- ③ 荣誉墙配图 ---- */
+.honor-img-wrapper {
+    grid-column: 1 / -1;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.honor-img-wrapper .placeholder-img,
+.honor-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+/* ---- ④ 曼巴精神配图 ---- */
+.mamba-img-wrapper {
+    max-width: 600px;
+    height: 200px;
+    margin: 0 auto 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mamba-img-wrapper .placeholder-img,
+.mamba-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+/* 对 quote 轮播区做响应调整 */
+.quote-slider {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    min-height: 200px;
+}
+
+/* ================================================
+   底部
+   ================================================ */
+
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(249, 160, 27, 0.1);
+    background: #1a0a2e;
+}
+
+.footer-motto {
+    font-size: 1.3rem;
+    color: var(--kobe-gold);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.footer p {
+    font-size: 0.88rem;
+    color: var(--kobe-gray);
+    margin-bottom: 4px;
+}
+
+.footer-copy {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ================================================
+   响应式
+   ================================================ */
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 24px;
+    }
+
+    .nav ul {
+        gap: 16px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .intro-stats {
+        justify-content: center;
+    }
+
+    .intro-image {
+        flex: 0 0 auto;
+        height: 300px;
+    }
+
+    .image-wrapper {
+        width: 200px;
+        height: 280px;
+    }
+
+    .intro-img {
+        border-radius: 20px;
+    }
+
+    .career-banner-img {
+        height: 150px;
+    }
+
+    .honor-img-wrapper {
+        height: 160px;
+    }
+
+    .mamba-img-wrapper {
+        height: 150px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        padding-left: 32px;
+    }
+
+    .timeline-icon {
+        left: -32px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .stat .num {
+        font-size: 1.8rem;
+    }
+
+    .honors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .honor-img-wrapper {
+        height: 130px;
+    }
+
+    .career-banner-img,
+    .mamba-img-wrapper {
+        height: 120px;
+    }
+}

@@ -8,7 +8,6 @@
   --accent-dark: #115e59;
   --warm: #f97316;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -30,8 +29,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
-  border-bottom: 1px solid var(--line);
+  background: #6b21a8;
 }
 
 .nav-bar {
@@ -47,20 +45,10 @@ a {
 .brand {
   font-size: 20px;
   font-weight: 800;
-  color: var(--accent-dark);
+  color: #ffffff;
 }
 
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
+  
 
 .hero {
   min-height: 430px;
@@ -72,13 +60,13 @@ a {
   background-color: #173042;
   background-size: cover;
   background-position: center;
-}
+  }
 
 .hero-content {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   color: #ffffff;
-}
+  }
 
 .eyebrow {
   margin: 0 0 10px;
@@ -133,12 +121,15 @@ a {
 
 .card-media {
   min-height: 170px;
-  display: grid;
-  place-items: center;
-  color: #ffffff;
-  font-size: 28px;
-  font-weight: 800;
+  overflow: hidden;
   background: linear-gradient(135deg, #0f766e, #2563eb);
+}
+
+.card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-body {
@@ -146,10 +137,16 @@ a {
 }
 
 .sport-tag {
-  margin: 0 0 6px;
-  color: var(--accent);
-  font-size: 13px;
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 3px 10px;
+  color: #6b21a8;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(107, 33, 168, 0.1);
+  border-radius: 4px;
 }
 
 .card-body h3 {
@@ -219,3 +216,4 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
