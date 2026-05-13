@@ -3,31 +3,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>明星四 | 体育明星馆</title>
+  <title>埃尔林·哈兰德 | Erling Haaland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header class="page-header">
-    <a class="back-link" href="../../index.html">返回首页</a>
-    <span>明星四展示页</span>
-  </header>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="../../index.html" class="nav-back">← 返回首页</a>
+      <div class="nav-title">Erling Haaland</div>
+      <div class="nav-toggle" id="navToggle">☰</div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Star Profile</p>
-        <h1>明星姓名</h1>
-        <p>这里填写运动项目、个人标语或一句简介。</p>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Football Superstar</p>
+      <h1 class="hero-title">埃尔林·哈兰德</h1>
+      <p class="hero-subtitle">Erling Braut Haaland</p>
+      <p class="hero-description">挪威足球运动员 | 曼城前锋 | 足坛新一代锋线杀手</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-value">50+</span>
+          <span class="stat-label">进球/赛季</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">1.2</span>
+          <span class="stat-label">进球/场</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">9</span>
+          <span class="stat-label">冠军奖杯</span>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-grid">
-      <article><h2>基本信息</h2><p>填写国籍、出生年份、运动项目、所属队伍等内容。</p></article>
-      <article><h2>代表成就</h2><p>填写冠军、纪录、奖项或重要比赛成绩。</p></article>
-      <article><h2>高光时刻</h2><p>可以放时间线、图片展示或一场代表性比赛。</p></article>
-      <article><h2>个人评价</h2><p>写出选择这位明星的原因，以及他/她带来的启发。</p></article>
-    </section>
-  </main>
+  <section class="info-section">
+    <div class="container">
+      <div class="info-card">
+        <div class="info-card-header">
+          <span class="info-icon">🏆</span>
+          <h2>基本信息</h2>
+        </div>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">国籍</span>
+            <span class="info-value">挪威</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">出生日期</span>
+            <span class="info-value">2000年7月21日</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">身高</span>
+            <span class="info-value">1.94米</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">体重</span>
+            <span class="info-value">94公斤</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">场上位置</span>
+            <span class="info-value">前锋</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">惯用脚</span>
+            <span class="info-value">右脚</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">现效力球队</span>
+            <span class="info-value">曼城</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">球衣号码</span>
+            <span class="info-value">9号</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section">
+    <div class="container">
+      <h2 class="section-title">成长经历</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <time class="timeline-year">2000</time>
+          <div class="timeline-content">
+            <h3>出生于英国利兹</h3>
+            <p>哈兰德出生于英国利兹，父亲是前曼城球员阿尔夫-因格·哈兰德</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2015</time>
+          <div class="timeline-content">
+            <h3>加盟布吕讷俱乐部</h3>
+            <p>在布吕讷完成职业首秀，开启足球生涯</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2017</time>
+          <div class="timeline-content">
+            <h3>转会莫尔德</h3>
+            <p>加盟挪威超级联赛球队莫尔德，逐渐崭露头角</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2019</time>
+          <div class="timeline-content">
+            <h3>加盟萨尔茨堡红牛</h3>
+            <p>登陆奥地利联赛，在欧冠赛场一鸣惊人</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2020</time>
+          <div class="timeline-content">
+            <h3>转会多特蒙德</h3>
+            <p>加盟德甲豪门多特蒙德，成为欧洲最炙手可热的新星</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2022</time>
+          <div class="timeline-content">
+            <h3>加盟曼城</h3>
+            <p>以创纪录转会费加盟曼城，开启职业生涯新篇章</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <time class="timeline-year">2023</time>
+          <div class="timeline-content">
+            <h3>三冠王伟业</h3>
+            <p>帮助曼城赢得英超、足总杯、欧冠三冠王，个人荣获多项大奖</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="badge-section">
+    <div class="container">
+      <h2 class="section-title">球队历程</h2>
+      <div class="badge-wall">
+        <div class="badge-item">
+          <div class="badge-icon">⚽</div>
+          <div class="badge-info">
+            <span class="badge-name">布吕讷</span>
+            <span class="badge-period">2015-2017</span>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">⚽</div>
+          <div class="badge-info">
+            <span class="badge-name">莫尔德</span>
+            <span class="badge-period">2017-2019</span>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">⚽</div>
+          <div class="badge-info">
+            <span class="badge-name">萨尔茨堡红牛</span>
+            <span class="badge-period">2019-2020</span>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">⚽</div>
+          <div class="badge-info">
+            <span class="badge-name">多特蒙德</span>
+            <span class="badge-period">2020-2022</span>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">⚽</div>
+          <div class="badge-info">
+            <span class="badge-name">曼城</span>
+            <span class="badge-period">2022-至今</span>
+          </div>
+        </div>
+        <div class="badge-item">
+          <div class="badge-icon">🇳🇴</div>
+          <div class="badge-info">
+            <span class="badge-name">挪威国家队</span>
+            <span class="badge-period">2019-至今</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="honors-section">
+    <div class="container">
+      <h2 class="section-title">成就荣誉</h2>
+      <div class="honors-grid">
+        <div class="honor-card">
+          <div class="honor-icon">🏆</div>
+          <div class="honor-content">
+            <h3>欧冠冠军</h3>
+            <p>2022-23赛季</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">🏆</div>
+          <div class="honor-content">
+            <h3>英超冠军</h3>
+            <p>2022-23、2023-24赛季</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">🏆</div>
+          <div class="honor-content">
+            <h3>足总杯冠军</h3>
+            <p>2022-23赛季</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">🥇</div>
+          <div class="honor-content">
+            <h3>欧洲金靴奖</h3>
+            <p>2022-23、2023-24赛季</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">🥇</div>
+          <div class="honor-content">
+            <h3>英超金靴奖</h3>
+            <p>2022-23、2023-24赛季</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">🥈</div>
+          <div class="honor-content">
+            <h3>金球奖亚军</h3>
+            <p>2023年</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">⭐</div>
+          <div class="honor-content">
+            <h3>欧冠最佳射手</h3>
+            <p>2022-23赛季（12球）</p>
+          </div>
+        </div>
+        <div class="honor-card">
+          <div class="honor-icon">⭐</div>
+          <div class="honor-content">
+            <h3>欧冠最快50球</h3>
+            <p>仅用39场比赛</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="highlights-section">
+    <div class="container">
+      <h2 class="section-title">高光时刻</h2>
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-image"></div>
+          <div class="highlight-info">
+            <h3>2023年欧冠决赛</h3>
+            <p>打入关键进球，帮助曼城首夺欧冠冠军</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-image"></div>
+          <div class="highlight-info">
+            <h3>单赛季52球纪录</h3>
+            <p>2022-23赛季创造英超历史进球纪录</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-image"></div>
+          <div class="highlight-info">
+            <h3>欧冠帽子戏法</h3>
+            <p>多次在欧冠赛场上演帽子戏法</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-image"></div>
+          <div class="highlight-info">
+            <h3>三冠王庆典</h3>
+            <p>曼城历史性夺得三冠王</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <h2 class="section-title">数据统计</h2>
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-club">布吕讷</span>
+            <span class="stat-record">0球 / 16场</span>
+          </div>
+          <div class="stat-bar-container">
+            <div class="stat-bar" style="width: 0%"></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-club">莫尔德</span>
+            <span class="stat-record">20球 / 50场</span>
+          </div>
+          <div class="stat-bar-container">
+            <div class="stat-bar" style="width: 16%"></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-club">萨尔茨堡红牛</span>
+            <span class="stat-record">29球 / 27场</span>
+          </div>
+          <div class="stat-bar-container">
+            <div class="stat-bar" style="width: 23%"></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-club">多特蒙德</span>
+            <span class="stat-record">86球 / 89场</span>
+          </div>
+          <div class="stat-bar-container">
+            <div class="stat-bar" style="width: 69%"></div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-header">
+            <span class="stat-club">曼城</span>
+            <span class="stat-record">125+球</span>
+          </div>
+          <div class="stat-bar-container">
+            <div class="stat-bar" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quotes-section">
+    <div class="container">
+      <h2 class="section-title">个人评价</h2>
+      <div class="quotes-container">
+        <blockquote class="quote-card">
+          <p>"哈兰德是我见过的最具天赋的年轻球员之一，他的进球能力令人难以置信。"</p>
+          <cite>—— 瓜迪奥拉，曼城主教练</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"哈兰德不仅是一名出色的射手，他的身体素质和比赛意识都是顶级的。"</p>
+          <cite>—— 阿兰·希勒，英超传奇射手</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"他有成为历史最佳射手的潜力，我很期待看到他未来的成就。"</p>
+          <cite>—— 梅西，足球巨星</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>Erling Haaland | 埃尔林·哈兰德</p>
+          <p>Football Superstar Profile</p>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2024 Star Profile. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="./script.js"></script>
 </body>
