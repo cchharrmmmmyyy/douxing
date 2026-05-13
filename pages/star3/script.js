@@ -1,1 +1,1 @@
-console.log("star3 page loaded");
+// Star3 页面以静态展示为主，保留简单结构，方便课程作业提交和后续修改。
