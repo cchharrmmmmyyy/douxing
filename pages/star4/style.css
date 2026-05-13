@@ -711,49 +711,122 @@ body {
 }
 
 @media (max-width: 640px) {
+  .hero {
+    min-height: 70vh;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
   
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.9375rem;
+    padding: 0 10px;
   }
   
   .hero-stats {
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    min-width: 80px;
   }
   
   .stat-value {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
   }
   
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-container {
+    height: 60px;
+  }
+  
+  .nav-title {
+    font-size: 1rem;
   }
   
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .info-card {
+    padding: 20px;
   }
   
   .honors-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .honor-card {
+    padding: 20px;
   }
   
   .highlights-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .highlight-image {
+    height: 160px;
   }
   
   .quotes-container {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .quote-card {
+    padding: 20px;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-content {
+    padding: 16px;
+    padding-left: 45px;
+  }
+  
+  .timeline-content::before {
+    left: -25px !important;
+  }
+  
+  .timeline-year {
+    font-size: 1.25rem;
+    width: 80px;
+  }
+  
+  .badge-item {
+    padding: 14px 20px;
   }
   
   .footer-content {
     flex-direction: column;
     text-align: center;
     gap: 16px;
+  }
+  
+  .footer-left p:first-child {
+    font-size: 1rem;
+  }
+  
+  .footer-left p:last-child,
+  .footer-right p {
+    font-size: 0.75rem;
   }
 }
