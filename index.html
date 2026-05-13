@@ -9,20 +9,27 @@
 <body>
   <header class="site-header">
     <nav class="nav-bar" aria-label="主导航">
-      <a class="brand" href="./index.html">体育明星馆</a>
-            <div class="nav-links"></div>
+            <a class="brand" href="./index.html">体育明星馆</a>
     </nav>
   </header>
 
   <main>
-        <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Sports Star Gallery</p>
-        <h1>体育运动明星主题主页</h1>
-        <p class="hero-text">
-          这里是小组作品的统一入口。每位成员选择一位喜欢的体育明星，进入独立页面展示人物经历、代表成就和个人理解。
-        </p>
+    <section class="hero carousel" id="heroCarousel">
+      <div class="carousel-track" id="carouselTrack">
+        <a class="carousel-slide" href="./pages/zy/kobe.html">
+          <img src="./picture/kebi.jpg" alt="科比布莱恩特">
+        </a>
+        <a class="carousel-slide" href="./pages/star2/index.html">
+          <img src="https://images.unsplash.com/photo-1526237589252-09fe261e9edf?w=800&h=450&fit=crop" alt="体育明星二">
+        </a>
+        <a class="carousel-slide" href="./pages/star3/index.html">
+          <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=450&fit=crop" alt="体育明星三">
+        </a>
+        <a class="carousel-slide" href="./pages/star4/index.html">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800&h=450&fit=crop" alt="体育明星四">
+        </a>
       </div>
+      <div class="carousel-indicators" id="carouselIndicators"></div>
     </section>
 
     <section class="section-wrap" aria-labelledby="gallery-title">
@@ -89,3 +96,4 @@
   <script src="./js/main.js"></script>
 </body>
 </html>
+
