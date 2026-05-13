@@ -3,383 +3,306 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>埃尔林·哈兰德 | Erling Haaland</title>
+  <title>哈兰德 | Erling Haaland</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="../../index.html" class="nav-back">← 返回首页</a>
-      <div class="nav-title">Erling Haaland</div>
-      <div class="nav-toggle" id="navToggle">☰</div>
-    </div>
-  </nav>
+  <main class="page-shell">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="pitch-lines" aria-hidden="true">
+        <span class="pitch-line pitch-line-mid"></span>
+        <span class="pitch-circle"></span>
+        <span class="pitch-box"></span>
+        <span class="pitch-arc"></span>
+      </div>
+      <div class="hero-number" aria-hidden="true">09</div>
+      <div class="hero-corner hero-corner-left" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner-right" aria-hidden="true"></div>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Football Superstar</p>
-      <h1 class="hero-title">埃尔林·哈兰德</h1>
-      <p class="hero-subtitle">Erling Braut Haaland</p>
-      <p class="hero-description">挪威足球运动员 | 曼城前锋 | 足坛新一代锋线杀手</p>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-value">50+</span>
-          <span class="stat-label">进球/赛季</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">1.2</span>
-          <span class="stat-label">进球/场</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-value">9</span>
-          <span class="stat-label">冠军奖杯</span>
+      <div class="hero-copy">
+        <p class="eyebrow">Manchester City No. 9</p>
+        <h1 id="hero-title">Erling<br>Haaland</h1>
+        <p class="hero-subtitle">从布吕讷的少年中锋，到曼城进球机器。速度、力量、跑位和禁区终结，组成他的比赛语言。</p>
+        <div class="hero-tags" aria-label="球员标签">
+          <span>Norway</span>
+          <span>Forward</span>
+          <span>Goal Machine</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="info-section">
-    <div class="container">
-      <div class="info-card">
-        <div class="info-card-header">
-          <span class="info-icon">🏆</span>
-          <h2>基本信息</h2>
+      <figure class="hero-photo" aria-label="哈兰德比赛照片">
+        <img src="./assets/official/man-united-header.png" alt="哈兰德在伊蒂哈德球场跃起庆祝">
+        <figcaption>
+          <span>Official Gallery</span>
+          <strong>Etihad moment</strong>
+        </figcaption>
+      </figure>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <p>Scroll</p>
+      </div>
+    </section>
+
+    <section class="section intro-section">
+      <div class="section-label">Profile</div>
+      <div class="intro-grid">
+        <div>
+          <h2>一个用速度、力量和终结效率定义比赛的现代中锋。</h2>
         </div>
-        <div class="info-grid">
-          <div class="info-item">
-            <span class="info-label">国籍</span>
-            <span class="info-value">挪威</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">出生日期</span>
-            <span class="info-value">2000年7月21日</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">身高</span>
-            <span class="info-value">1.94米</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">体重</span>
-            <span class="info-value">94公斤</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">场上位置</span>
-            <span class="info-value">前锋</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">惯用脚</span>
-            <span class="info-value">右脚</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">现效力球队</span>
-            <span class="info-value">曼城</span>
-          </div>
-          <div class="info-item">
-            <span class="info-label">球衣号码</span>
-            <span class="info-value">9号</span>
-          </div>
+        <div class="intro-copy">
+          <p>埃尔林·布劳特·哈兰德出生于英格兰利兹，三岁后回到挪威布吕讷成长。他从五岁进入布吕讷青训，后来经历莫尔德、萨尔茨堡红牛、多特蒙德，最终在 2022 年来到曼城。</p>
+          <p>他的特点并不复杂，却极难防守：1.95 米的身高、强大的冲刺能力、禁区内的第一时间处理，以及对落点和防线身后的敏锐判断，让他成为现代足球里最直接的终结答案之一。</p>
+          <p>和许多需要大量持球参与的前锋不同，哈兰德的存在感常常来自“等待”。他会在很长时间里看似远离镜头，然后突然用一次前插、一次抢点或一次身体对抗改变比分。</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="timeline-section">
-    <div class="container">
-      <h2 class="section-title">成长经历</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <time class="timeline-year">2000</time>
-          <div class="timeline-content">
-            <h3>出生于英国利兹</h3>
-            <p>哈兰德出生于英国利兹，父亲是前曼城球员阿尔夫-因格·哈兰德</p>
-          </div>
+      <div class="fact-strip" aria-label="哈兰德基础信息">
+        <div>
+          <span>Born</span>
+          <strong>2000.07.21</strong>
         </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2015</time>
-          <div class="timeline-content">
-            <h3>加盟布吕讷俱乐部</h3>
-            <p>在布吕讷完成职业首秀，开启足球生涯</p>
-          </div>
+        <div>
+          <span>Height</span>
+          <strong>1.95m</strong>
         </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2017</time>
-          <div class="timeline-content">
-            <h3>转会莫尔德</h3>
-            <p>加盟挪威超级联赛球队莫尔德，逐渐崭露头角</p>
-          </div>
+        <div>
+          <span>Position</span>
+          <strong>Striker</strong>
         </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2019</time>
-          <div class="timeline-content">
-            <h3>加盟萨尔茨堡红牛</h3>
-            <p>登陆奥地利联赛，在欧冠赛场一鸣惊人</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2020</time>
-          <div class="timeline-content">
-            <h3>转会多特蒙德</h3>
-            <p>加盟德甲豪门多特蒙德，成为欧洲最炙手可热的新星</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2022</time>
-          <div class="timeline-content">
-            <h3>加盟曼城</h3>
-            <p>以创纪录转会费加盟曼城，开启职业生涯新篇章</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <time class="timeline-year">2023</time>
-          <div class="timeline-content">
-            <h3>三冠王伟业</h3>
-            <p>帮助曼城赢得英超、足总杯、欧冠三冠王，个人荣获多项大奖</p>
-          </div>
+        <div>
+          <span>Club</span>
+          <strong>Manchester City</strong>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="badge-section">
-    <div class="container">
-      <h2 class="section-title">球队历程</h2>
-      <div class="badge-wall">
-        <div class="badge-item">
-          <div class="badge-icon">⚽</div>
-          <div class="badge-info">
-            <span class="badge-name">布吕讷</span>
-            <span class="badge-period">2015-2017</span>
-          </div>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon">⚽</div>
-          <div class="badge-info">
-            <span class="badge-name">莫尔德</span>
-            <span class="badge-period">2017-2019</span>
-          </div>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon">⚽</div>
-          <div class="badge-info">
-            <span class="badge-name">萨尔茨堡红牛</span>
-            <span class="badge-period">2019-2020</span>
-          </div>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon">⚽</div>
-          <div class="badge-info">
-            <span class="badge-name">多特蒙德</span>
-            <span class="badge-period">2020-2022</span>
-          </div>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon">⚽</div>
-          <div class="badge-info">
-            <span class="badge-name">曼城</span>
-            <span class="badge-period">2022-至今</span>
-          </div>
-        </div>
-        <div class="badge-item">
-          <div class="badge-icon">🇳🇴</div>
-          <div class="badge-info">
-            <span class="badge-name">挪威国家队</span>
-            <span class="badge-period">2019-至今</span>
-          </div>
+    <section class="section biography-section">
+      <div class="section-heading">
+        <span class="section-label">Biography</span>
+        <h2>人物档案</h2>
+      </div>
+      <div class="bio-layout">
+        <article class="bio-lead">
+          <span>Profile Note</span>
+          <h3>他不是传统意义上细腻的组织者，而是把比赛推向终点的人。</h3>
+          <p>哈兰德的成长轨迹很清晰：挪威青训给了他职业起点，萨尔茨堡让欧洲看到他的爆发，多特蒙德证明他能持续高产，曼城则把他的终结能力放进一个创造力极强的体系里。</p>
+        </article>
+        <div class="bio-points">
+          <article>
+            <span>01</span>
+            <h3>家庭与足球环境</h3>
+            <p>他的父亲阿尔夫-因格·哈兰德曾效力曼城和利兹联，这让哈兰德从小就接触职业足球环境。回到挪威后，他在布吕讷成长，早早进入本地俱乐部青训。</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>身体天赋之外</h3>
+            <p>身高和力量是他的底色，但真正让他可怕的是启动时机。他常常先藏在中卫肩侧，再用短距离冲刺抢到第一落点。</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>终结者的冷静</h3>
+            <p>哈兰德的射门选择非常直接：能一脚完成就不多带，能靠近球门就不选择复杂角度。这种简洁让他的效率长期维持在高位。</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>曼城的适配</h3>
+            <p>曼城拥有大量传球手和边路创造者。哈兰德并不需要改变球队的控球习惯，他更像体系里的终点，把不断出现的半机会转化成确定性。</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="honors-section">
-    <div class="container">
-      <h2 class="section-title">成就荣誉</h2>
-      <div class="honors-grid">
-        <div class="honor-card">
-          <div class="honor-icon">🏆</div>
-          <div class="honor-content">
-            <h3>欧冠冠军</h3>
-            <p>2022-23赛季</p>
+    <section class="section stats-section">
+      <div class="section-heading">
+        <span class="section-label">Numbers</span>
+        <h2>核心数据</h2>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-panel">
+          <span class="stat-kicker">Manchester City</span>
+          <strong>100+</strong>
+          <p>曼城官方用“100 goals, 100 photos”记录了他的百球节点，从首秀双响一路写到新的里程碑。</p>
+        </article>
+        <article class="stat-panel">
+          <span class="stat-kicker">Debut Season</span>
+          <strong>52</strong>
+          <p>2022-23 赛季各项赛事 52 球，帮助曼城赢下三冠王，也刷新了英格兰顶级前锋的效率想象。</p>
+        </article>
+        <article class="stat-panel">
+          <span class="stat-kicker">Premier League</span>
+          <strong>36</strong>
+          <p>英超首季打入 36 球，创造单赛季进球纪录，并拿下英超金靴。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chapters-section">
+      <div class="section-heading">
+        <span class="section-label">Chapters</span>
+        <h2>人物章节</h2>
+      </div>
+      <div class="chapter-list">
+        <article class="chapter-card">
+          <img src="./assets/official/goal-001-west-ham-penalty.png" alt="哈兰德早期曼城进球后的冥想庆祝">
+          <div>
+            <span>Chapter 01</span>
+            <h3>第一印象：不需要太多触球</h3>
+            <p>哈兰德来到曼城后，最特别的地方不是参与每一次传导，而是把等待变成威胁。他经常只在关键区域出现几秒，却能用跑位把整条防线拉开。</p>
           </div>
+        </article>
+        <article class="chapter-card">
+          <img src="./assets/official/arsenal-home-left-foot.png" alt="哈兰德对阵阿森纳后的庆祝瞬间">
+          <div>
+            <span>Chapter 02</span>
+            <h3>终结方式：简单但致命</h3>
+            <p>官方百球图库把他的进球拆成左脚、右脚、头球、点球和禁区内终结。对他来说，复杂动作不是重点，第一时间完成射门才是答案。</p>
+          </div>
+        </article>
+        <article class="chapter-card">
+          <img src="./assets/official/man-united-away-celebrate.jpg" alt="哈兰德与曼城队友庆祝进球">
+          <div>
+            <span>Chapter 03</span>
+            <h3>体系里的终点</h3>
+            <p>在曼城，他是传控体系最后的一步。德布劳内、福登、格拉利什和边路传中创造空间，哈兰德则负责把机会变成比分。</p>
+          </div>
+        </article>
+        <article class="chapter-card">
+          <img src="./assets/haaland-100-photos-poster.webp" alt="哈兰德百球纪念官方海报">
+          <div>
+            <span>Chapter 04</span>
+            <h3>从进球到纪念册</h3>
+            <p>当进球数量足够大时，它就不再只是数据，而会变成一段可以被整理、回看和收藏的球队记忆。百球图库正是这种记忆的入口。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section archive-section">
+      <div class="section-heading">
+        <span class="section-label">Archive</span>
+        <h2>高光相册</h2>
+      </div>
+      <div class="archive-layout">
+        <article class="photo-placeholder photo-placeholder-main">
+          <img src="./assets/haaland-100-photos-poster.webp" alt="哈兰德百球纪念海报">
+          <span>Photo 01</span>
+          <h3>百球纪念</h3>
+          <p>这里后续放官方图片包中的代表性照片。</p>
+        </article>
+        <article class="photo-placeholder">
+          <img src="./assets/official/goal-001-west-ham-penalty.png" alt="哈兰德早期曼城进球后的庆祝">
+          <span>Photo 02</span>
+          <h3>首章记忆</h3>
+        </article>
+        <article class="photo-placeholder">
+          <img src="./assets/official/man-united-header.png" alt="哈兰德在主场跃起庆祝">
+          <span>Photo 03</span>
+          <h3>主场沸腾</h3>
+        </article>
+        <article class="photo-placeholder">
+          <img src="./assets/official/arsenal-home-left-foot.png" alt="哈兰德对阵阿森纳庆祝">
+          <span>Photo 04</span>
+          <h3>强强对话</h3>
+        </article>
+        <article class="photo-placeholder">
+          <img src="./assets/official/man-united-away-celebrate.jpg" alt="哈兰德与队友庆祝">
+          <span>Photo 05</span>
+          <h3>庆祝瞬间</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section route-section">
+      <div class="section-heading">
+        <span class="section-label">Route</span>
+        <h2>生涯路线</h2>
+      </div>
+      <div class="route-track" aria-label="哈兰德职业生涯路线">
+        <div class="route-node">
+          <span>2015</span>
+          <strong>布吕讷</strong>
+          <p>从家乡俱乐部青训走向职业赛场。</p>
         </div>
-        <div class="honor-card">
-          <div class="honor-icon">🏆</div>
-          <div class="honor-content">
-            <h3>英超冠军</h3>
-            <p>2022-23、2023-24赛季</p>
-          </div>
+        <div class="route-node">
+          <span>2017</span>
+          <strong>莫尔德</strong>
+          <p>在挪威顶级联赛逐渐完成中锋转型。</p>
         </div>
-        <div class="honor-card">
-          <div class="honor-icon">🏆</div>
-          <div class="honor-content">
-            <h3>足总杯冠军</h3>
-            <p>2022-23赛季</p>
-          </div>
+        <div class="route-node">
+          <span>2019</span>
+          <strong>萨尔茨堡红牛</strong>
+          <p>欧冠首秀帽子戏法，让欧洲开始记住他。</p>
         </div>
-        <div class="honor-card">
-          <div class="honor-icon">🥇</div>
-          <div class="honor-content">
-            <h3>欧洲金靴奖</h3>
-            <p>2022-23、2023-24赛季</p>
-          </div>
+        <div class="route-node">
+          <span>2020</span>
+          <strong>多特蒙德</strong>
+          <p>在德甲保持高速进球，成为豪门争抢对象。</p>
         </div>
-        <div class="honor-card">
-          <div class="honor-icon">🥇</div>
-          <div class="honor-content">
-            <h3>英超金靴奖</h3>
-            <p>2022-23、2023-24赛季</p>
-          </div>
-        </div>
-        <div class="honor-card">
-          <div class="honor-icon">🥈</div>
-          <div class="honor-content">
-            <h3>金球奖亚军</h3>
-            <p>2023年</p>
-          </div>
-        </div>
-        <div class="honor-card">
-          <div class="honor-icon">⭐</div>
-          <div class="honor-content">
-            <h3>欧冠最佳射手</h3>
-            <p>2022-23赛季（12球）</p>
-          </div>
-        </div>
-        <div class="honor-card">
-          <div class="honor-icon">⭐</div>
-          <div class="honor-content">
-            <h3>欧冠最快50球</h3>
-            <p>仅用39场比赛</p>
-          </div>
+        <div class="route-node">
+          <span>2022</span>
+          <strong>曼城</strong>
+          <p>把球队创造力转化为稳定产量。</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="highlights-section">
-    <div class="container">
-      <h2 class="section-title">高光时刻</h2>
-      <div class="highlights-grid">
-        <div class="highlight-card">
-          <div class="highlight-image"></div>
-          <div class="highlight-info">
-            <h3>2023年欧冠决赛</h3>
-            <p>打入关键进球，帮助曼城首夺欧冠冠军</p>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-image"></div>
-          <div class="highlight-info">
-            <h3>单赛季52球纪录</h3>
-            <p>2022-23赛季创造英超历史进球纪录</p>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-image"></div>
-          <div class="highlight-info">
-            <h3>欧冠帽子戏法</h3>
-            <p>多次在欧冠赛场上演帽子戏法</p>
-          </div>
-        </div>
-        <div class="highlight-card">
-          <div class="highlight-image"></div>
-          <div class="highlight-info">
-            <h3>三冠王庆典</h3>
-            <p>曼城历史性夺得三冠王</p>
-          </div>
-        </div>
+    <section class="section story-section">
+      <div class="section-heading">
+        <span class="section-label">Story</span>
+        <h2>人物故事</h2>
       </div>
-    </div>
-  </section>
+      <div class="story-grid">
+        <article>
+          <span>01</span>
+          <h3>利兹出生，布吕讷长大</h3>
+          <p>父亲阿尔夫-因格·哈兰德曾在英超踢球，哈兰德出生在利兹，但童年足球真正开始于挪威布吕讷。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>多项目运动底色</h3>
+          <p>少年时期的他不只踢足球，也接触手球、高尔夫、田径，这些经历让他的协调性和爆发力更突出。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>萨尔茨堡爆发</h3>
+          <p>2019 年欧冠小组赛，他用帽子戏法和连续进球把名字推到欧洲中心。</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>多特蒙德加速</h3>
+          <p>在德甲，他把身体优势、前插时机和左脚终结结合起来，成为欧洲最可怕的新生代中锋。</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>曼城章节</h3>
+          <p>来到曼城后，他不需要触球很多，却总能在最危险的区域出现，把传中、直塞和二点球变成进球。</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>百球档案</h3>
+          <p>官方百球图库把他的进球分解成左脚、右脚、头球、点球和庆祝动作，也让这个页面可以继续做成“进球博物馆”。</p>
+        </article>
+      </div>
+    </section>
 
-  <section class="stats-section">
-    <div class="container">
-      <h2 class="section-title">数据统计</h2>
-      <div class="stats-container">
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-club">布吕讷</span>
-            <span class="stat-record">0球 / 16场</span>
-          </div>
-          <div class="stat-bar-container">
-            <div class="stat-bar" style="width: 0%"></div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-club">莫尔德</span>
-            <span class="stat-record">20球 / 50场</span>
-          </div>
-          <div class="stat-bar-container">
-            <div class="stat-bar" style="width: 16%"></div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-club">萨尔茨堡红牛</span>
-            <span class="stat-record">29球 / 27场</span>
-          </div>
-          <div class="stat-bar-container">
-            <div class="stat-bar" style="width: 23%"></div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-club">多特蒙德</span>
-            <span class="stat-record">86球 / 89场</span>
-          </div>
-          <div class="stat-bar-container">
-            <div class="stat-bar" style="width: 69%"></div>
-          </div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-header">
-            <span class="stat-club">曼城</span>
-            <span class="stat-record">125+球</span>
-          </div>
-          <div class="stat-bar-container">
-            <div class="stat-bar" style="width: 100%"></div>
-          </div>
-        </div>
+    <section class="section honors-section">
+      <div class="section-heading">
+        <span class="section-label">Honors</span>
+        <h2>荣誉墙</h2>
       </div>
-    </div>
-  </section>
-
-  <section class="quotes-section">
-    <div class="container">
-      <h2 class="section-title">个人评价</h2>
-      <div class="quotes-container">
-        <blockquote class="quote-card">
-          <p>"哈兰德是我见过的最具天赋的年轻球员之一，他的进球能力令人难以置信。"</p>
-          <cite>—— 瓜迪奥拉，曼城主教练</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"哈兰德不仅是一名出色的射手，他的身体素质和比赛意识都是顶级的。"</p>
-          <cite>—— 阿兰·希勒，英超传奇射手</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"他有成为历史最佳射手的潜力，我很期待看到他未来的成就。"</p>
-          <cite>—— 梅西，足球巨星</cite>
-        </blockquote>
+      <div class="honors-wall">
+        <span>欧冠冠军</span>
+        <span>英超冠军</span>
+        <span>足总杯冠军</span>
+        <span>欧洲金靴</span>
+        <span>英超金靴</span>
+        <span>年度最佳球员</span>
       </div>
-    </div>
-  </section>
-
-  <footer class="page-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-left">
-          <p>Erling Haaland | 埃尔林·哈兰德</p>
-          <p>Football Superstar Profile</p>
-        </div>
-        <div class="footer-right">
-          <p>&copy; 2024 Star Profile. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </section>
+  </main>
 
   <script src="./script.js"></script>
 </body>
