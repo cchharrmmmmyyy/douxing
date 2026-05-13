@@ -65,11 +65,15 @@ body {
   color: var(--color-secondary);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .nav-back:hover {
   color: var(--color-accent);
+  transform: translateX(-4px);
 }
 
 .nav-title {
@@ -254,6 +258,13 @@ body {
   padding: 16px;
   border-radius: 8px;
   border: 1px solid var(--color-border);
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.1);
 }
 
 .info-label {
@@ -333,6 +344,13 @@ body {
   border-radius: 12px;
   border: 1px solid var(--color-border);
   position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-content:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(253, 203, 110, 0.1);
 }
 
 .timeline-content::before {
@@ -401,6 +419,11 @@ body {
 
 .badge-icon {
   font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.badge-item:hover .badge-icon {
+  transform: scale(1.15);
 }
 
 .badge-info {
