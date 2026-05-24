@@ -10,6 +10,16 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <header class="site-header">
+    <a class="site-brand" href="../../index.html">体育明星馆</a>
+    <nav class="site-nav" aria-label="页面导航">
+      <a href="../../index.html">首页</a>
+      <a href="#profile">简介</a>
+      <a href="#numbers">数据</a>
+      <a href="#archive">相册</a>
+    </nav>
+  </header>
+
   <main class="page-shell">
     <section class="hero-section" aria-labelledby="hero-title">
       <div class="pitch-lines" aria-hidden="true">
@@ -47,7 +57,7 @@
       </div>
     </section>
 
-    <section class="section intro-section">
+    <section class="section intro-section" id="profile">
       <div class="section-label">Profile</div>
       <div class="intro-grid">
         <div>
@@ -115,7 +125,7 @@
       </div>
     </section>
 
-    <section class="section stats-section">
+    <section class="section stats-section" id="numbers">
       <div class="section-heading">
         <span class="section-label">Numbers</span>
         <h2>核心数据</h2>
@@ -180,7 +190,7 @@
       </div>
     </section>
 
-    <section class="section archive-section">
+    <section class="section archive-section" id="archive">
       <div class="section-heading">
         <span class="section-label">Archive</span>
         <h2>高光相册</h2>
@@ -303,6 +313,11 @@
       </div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>体育明星馆 | 页面四：Erling Haaland 主题展示</p>
+    <a href="../../index.html">返回主页面</a>
+  </footer>
 
   <script src="./script.js"></script>
 </body>
