@@ -3,29 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>明星二 | 体育明星馆</title>
+  <title>乒乓球三巨星 | Table Tennis Legends</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header class="page-header">
-    <a class="back-link" href="../../index.html">返回首页</a>
-    <span>明星二展示页</span>
-  </header>
+  <main class="page-shell">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="table-lines" aria-hidden="true">
+        <span class="table-edge table-edge-top"></span>
+        <span class="table-edge table-edge-bottom"></span>
+        <span class="table-edge table-edge-left"></span>
+        <span class="table-edge table-edge-right"></span>
+        <span class="table-midline"></span>
+        <span class="table-net"></span>
+        <span class="ball-trace ball-trace-one"></span>
+        <span class="ball-trace ball-trace-two"></span>
+      </div>
+      <div class="hero-number" aria-hidden="true">03</div>
+      <div class="hero-corner hero-corner-left" aria-hidden="true"></div>
+      <div class="hero-corner hero-corner-right" aria-hidden="true"></div>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Star Profile</p>
-        <h1>明星姓名</h1>
-        <p>这里填写运动项目、个人标语或一句简介。</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Chinese Table Tennis</p>
+        <h1 id="hero-title">Table<br>Tennis<br>Legends</h1>
+        <p class="hero-subtitle">从速度、旋转到意志力，樊振东、马龙、张继科把国乒的不同气质写进同一张球台：新生代的冲击、时代标杆的稳定，以及大赛舞台上的锋芒。</p>
+        <div class="hero-tags" aria-label="页面人物">
+          <span>Fan Zhendong</span>
+          <span>Ma Long</span>
+          <span>Zhang Jike</span>
+        </div>
+      </div>
+
+      <figure class="hero-photo" aria-label="樊振东比赛庆祝照片">
+        <img src="./assets/fan-zhendong-1.png" alt="樊振东在奥运赛场张开双臂庆祝">
+        <figcaption>
+          <span>Opening Serve</span>
+          <strong>Power and precision</strong>
+        </figcaption>
+      </figure>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <p>Scroll</p>
       </div>
     </section>
 
-    <section class="content-grid">
-      <article><h2>基本信息</h2><p>填写国籍、出生年份、运动项目、所属队伍等内容。</p></article>
-      <article><h2>代表成就</h2><p>填写冠军、纪录、奖项或重要比赛成绩。</p></article>
-      <article><h2>高光时刻</h2><p>可以放时间线、图片展示或一场代表性比赛。</p></article>
-      <article><h2>个人评价</h2><p>写出选择这位明星的原因，以及他/她带来的启发。</p></article>
+    <section class="section intro-section" id="profile">
+      <div class="section-label">Profile</div>
+      <div class="intro-grid">
+        <div>
+          <h2>三种冠军气质，构成中国男子乒乓球的一个缩影。</h2>
+        </div>
+        <div class="intro-copy">
+          <p>乒乓球不是只比谁更快。它同时考验预判、节奏、线路、心理承压和临场选择。真正顶尖的球员，往往能在极短的回合里完成观察、欺骗、变化和终结。</p>
+          <p>樊振东代表着强对抗时代的厚度，正反手质量、连续进攻和相持能力都极具压迫感；马龙像一套完整体系，衔接、控制、变化和大赛处理几乎没有短板；张继科则拥有极鲜明的爆发力和舞台感，关键分里敢于把比赛推向最高风险。</p>
+          <p>这一页不做单一人物传记，而是把三位明星放在同一个叙事里：他们的照片、荣誉和比赛气质共同组成一条国乒男队的高光路线。</p>
+        </div>
+      </div>
+      <div class="fact-strip" aria-label="页面基础信息">
+        <div>
+          <span>Sport</span>
+          <strong>Table Tennis</strong>
+        </div>
+        <div>
+          <span>Team</span>
+          <strong>China</strong>
+        </div>
+        <div>
+          <span>Theme</span>
+          <strong>Speed / Spin / Nerve</strong>
+        </div>
+        <div>
+          <span>Focus</span>
+          <strong>Three Icons</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section icons-section">
+      <div class="section-heading">
+        <span class="section-label">Three Icons</span>
+        <h2>三位主角</h2>
+      </div>
+      <div class="icon-grid">
+        <article class="player-card">
+          <img src="./assets/fan-zhendong-2.png" alt="樊振东握拳庆祝">
+          <div class="player-copy">
+            <span>Fan Zhendong</span>
+            <h3>樊振东</h3>
+            <p>以厚实的正反手质量、强大的相持能力和高强度连续进攻著称。巴黎奥运周期后，他的名字已经和国乒新一代领军人物紧密相连。</p>
+          </div>
+        </article>
+        <article class="player-card">
+          <img src="./assets/ma-long-1.png" alt="马龙穿红色球衣庆祝">
+          <div class="player-copy">
+            <span>Ma Long</span>
+            <h3>马龙</h3>
+            <p>男子乒坛极具代表性的全满贯球员之一，技术结构完整，阅读比赛能力出众，长期保持顶级竞争力，是稳定与全面的代名词。</p>
+          </div>
+        </article>
+        <article class="player-card">
+          <img src="./assets/zhang-jike-1.png" alt="张继科黑色球衣呐喊庆祝">
+          <div class="player-copy">
+            <span>Zhang Jike</span>
+            <h3>张继科</h3>
+            <p>大赛气质鲜明，反手拧拉和关键分爆发力令人印象深刻。他用极短时间完成大满贯，留下了锋利、直接、极具张力的时代记忆。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section highlight-section" id="highlights">
+      <div class="section-heading">
+        <span class="section-label">Career Highlights</span>
+        <h2>高光档案</h2>
+      </div>
+      <div class="highlight-grid">
+        <article class="highlight-panel">
+          <span class="stat-kicker">Fan Zhendong</span>
+          <strong>FZD</strong>
+          <p>奥运冠军、世乒赛男单冠军、世界杯冠军。他的比赛常常像一台持续加压的机器，越到相持深处，越能体现身体质量和击球稳定性。</p>
+        </article>
+        <article class="highlight-panel">
+          <span class="stat-kicker">Ma Long</span>
+          <strong>ML</strong>
+          <p>两届奥运男单冠军得主，也是男子乒坛最具统治力和完整性的代表人物之一。他的强大不只在进攻，更在每一板之前的选择。</p>
+        </article>
+        <article class="highlight-panel">
+          <span class="stat-kicker">Zhang Jike</span>
+          <strong>ZJK</strong>
+          <p>奥运会、世乒赛、世界杯男单冠军得主，以极快速度完成大满贯。张继科的标志，是把大赛压力变成进攻欲望。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chapters-section">
+      <div class="section-heading">
+        <span class="section-label">Match Temperament</span>
+        <h2>比赛气质</h2>
+      </div>
+      <div class="chapter-list">
+        <article class="chapter-card">
+          <img src="./assets/fan-zhendong-4.png" alt="樊振东张开双臂庆祝胜利">
+          <div>
+            <span>Chapter 01</span>
+            <h3>樊振东：强度拉满后的确定性</h3>
+            <p>樊振东的强不只是力量感，而是能在高质量对拉里持续保持击球深度。他把很多看似五五开的回合，变成了自己更习惯、更能承受的节奏。</p>
+          </div>
+        </article>
+        <article class="chapter-card">
+          <img src="./assets/ma-long-3.png" alt="马龙在大型赛场中准备比赛">
+          <div>
+            <span>Chapter 02</span>
+            <h3>马龙：一套几乎完整的解题系统</h3>
+            <p>马龙最特别的地方，是他不依赖单一武器。他可以用控制建立优势，也可以用变化打乱对手，还能在关键分里找到最稳的那条线路。</p>
+          </div>
+        </article>
+        <article class="chapter-card">
+          <img src="./assets/zhang-jike-2.png" alt="张继科和观众一起庆祝">
+          <div>
+            <span>Chapter 03</span>
+            <h3>张继科：越大的舞台，越锋利的出手</h3>
+            <p>张继科的比赛有一种强烈的瞬间爆发感。反手、拧拉、抢攻和庆祝动作都极具辨识度，也让他的高光时刻带着非常强的个人风格。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section timeline-section">
+      <div class="section-heading">
+        <span class="section-label">Timeline</span>
+        <h2>国乒传承</h2>
+      </div>
+      <div class="timeline-track" aria-label="三位运动员生涯时间线">
+        <div class="timeline-node">
+          <span>2011</span>
+          <strong>张继科登顶世乒赛</strong>
+          <p>他的爆发把男子乒坛带入一个更具冲击感的阶段。</p>
+        </div>
+        <div class="timeline-node">
+          <span>2012</span>
+          <strong>伦敦奥运高光</strong>
+          <p>张继科完成奥运男单冠军的重要篇章。</p>
+        </div>
+        <div class="timeline-node">
+          <span>2016</span>
+          <strong>马龙里约加冕</strong>
+          <p>技术完整性与长期积累在奥运舞台集中兑现。</p>
+        </div>
+        <div class="timeline-node">
+          <span>2021</span>
+          <strong>马龙东京卫冕</strong>
+          <p>延续统治力，也把“稳定”写成传奇的一部分。</p>
+        </div>
+        <div class="timeline-node">
+          <span>2024</span>
+          <strong>樊振东巴黎突破</strong>
+          <p>新一代核心在奥运舞台完成自己的代表篇章。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <span class="section-label">Gallery</span>
+        <h2>影像档案</h2>
+      </div>
+      <div class="gallery-layout">
+        <article class="photo-card photo-card-main">
+          <img src="./assets/fan-zhendong-1.png" alt="樊振东奥运赛场庆祝">
+          <span>Photo 01</span>
+          <h3>巴黎时刻</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/fan-zhendong-2.png" alt="樊振东握拳呐喊">
+          <span>Photo 02</span>
+          <h3>能量释放</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/fan-zhendong-3.png" alt="樊振东近景庆祝">
+          <span>Photo 03</span>
+          <h3>关键分表情</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/fan-zhendong-4.png" alt="樊振东张开双臂">
+          <span>Photo 04</span>
+          <h3>胜利伸展</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/ma-long-1.png" alt="马龙红色球衣庆祝">
+          <span>Photo 05</span>
+          <h3>龙队时刻</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/ma-long-2.png" alt="马龙蓝色球衣庆祝">
+          <span>Photo 06</span>
+          <h3>主场光束</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/ma-long-3.png" alt="马龙在国际赛场比赛">
+          <span>Photo 07</span>
+          <h3>大场面</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/zhang-jike-1.png" alt="张继科黑色球衣庆祝">
+          <span>Photo 08</span>
+          <h3>锋芒</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/zhang-jike-2.png" alt="张继科与观众互动庆祝">
+          <span>Photo 09</span>
+          <h3>看台回声</h3>
+        </article>
+        <article class="photo-card">
+          <img src="./assets/zhang-jike-3.png" alt="张继科红色球衣俯视比赛照片">
+          <span>Photo 10</span>
+          <h3>俯冲进攻</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section honors-section">
+      <div class="section-heading">
+        <span class="section-label">Keywords</span>
+        <h2>关键词</h2>
+      </div>
+      <div class="honors-wall">
+        <span>奥运冠军</span>
+        <span>世乒赛冠军</span>
+        <span>世界杯冠军</span>
+        <span>大满贯</span>
+        <span>国乒男队</span>
+        <span>速度与旋转</span>
+      </div>
     </section>
   </main>
 

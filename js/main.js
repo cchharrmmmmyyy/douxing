@@ -42,7 +42,7 @@ function resetTimer() {
   clearInterval(timer);
   timer = setInterval(() => {
     goTo((current + 1) % slides.length);
-  }, 1000);
+  }, 4000);
 }
 
 resetTimer();
