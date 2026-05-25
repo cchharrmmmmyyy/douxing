@@ -1,14 +1,13 @@
 :root {
-  --bg: #f5f7fb;
+  --bg: #f4f7fb;
   --panel: #ffffff;
-  --text: #172033;
-  --muted: #637083;
-  --line: #dbe3ee;
+  --text: #162033;
+  --muted: #657287;
+  --line: #d9e2ee;
+  --nav: #172033;
   --purple: #6b21a8;
   --teal: #0f766e;
-  --blue: #2563eb;
-  --red: #dc2626;
-  --gold: #d99a22;
+  --gold: #d69b2d;
 }
 
 * {
@@ -21,13 +20,15 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
   font-family: Arial, "Microsoft YaHei", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(90deg, rgba(23, 32, 51, 0.04) 1px, transparent 1px),
-    linear-gradient(rgba(23, 32, 51, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 32, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(rgba(22, 32, 51, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at 84% 18%, rgba(107, 33, 168, 0.1), transparent 26%),
     var(--bg);
-  background-size: 38px 38px;
+  background-size: 38px 38px, 38px 38px, auto, auto;
   line-height: 1.6;
 }
 
@@ -43,9 +44,9 @@ img {
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 20;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(23, 32, 51, 0.94);
+  z-index: 30;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(23, 32, 51, 0.95);
   backdrop-filter: blur(14px);
 }
 
@@ -62,7 +63,7 @@ img {
 .brand {
   color: #ffffff;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .nav-links {
@@ -71,7 +72,7 @@ img {
   gap: 14px;
   color: rgba(255, 255, 255, 0.78);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .nav-links a:hover {
@@ -83,199 +84,244 @@ img {
   margin: 0 auto;
 }
 
-.home-intro {
-  min-height: 42vh;
+.home-hero {
+  min-height: calc(100vh - 64px);
   display: grid;
+  place-items: center;
   align-content: center;
-  padding: 72px 0 42px;
+  gap: 20px;
+  padding: 22px 0 52px;
+}
+
+.hero-copy {
+  width: 100%;
+  padding: 0;
+  text-align: center;
 }
 
 .eyebrow,
-.sport-tag {
+.slide-kicker {
   margin: 0;
   color: var(--purple);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.home-intro h1 {
-  max-width: 850px;
-  margin: 12px 0 16px;
-  font-size: clamp(2.4rem, 6vw, 5.8rem);
+.hero-copy h1 {
+  max-width: 860px;
+  margin: 8px auto 10px;
+  font-size: clamp(2rem, 4.4vw, 4rem);
   line-height: 1;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
-.home-intro p:last-child {
-  max-width: 680px;
-  margin: 0;
+.hero-copy p:last-child {
+  max-width: 720px;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.showcase-sections {
+.hero-carousel {
+  width: 100%;
   display: grid;
-  gap: 22px;
-  padding: 24px 0 72px;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  padding: 0;
 }
 
-.showcase-section {
-  min-height: 430px;
-  display: grid;
-  grid-template-columns: minmax(280px, 0.92fr) minmax(280px, 1fr);
-  gap: clamp(24px, 5vw, 64px);
-  align-items: center;
-  padding: clamp(18px, 3vw, 34px);
+.carousel-shell {
+  position: relative;
+  min-height: clamp(520px, 68vh, 720px);
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--panel);
-  box-shadow: 0 20px 54px rgba(23, 32, 51, 0.09);
+  background: #0d1420;
+  box-shadow: 0 24px 72px rgba(22, 32, 51, 0.18);
 }
 
-.showcase-section:nth-child(even) .section-media {
-  order: 2;
+.carousel-track {
+  display: flex;
+  height: 100%;
+  min-height: inherit;
+  transform: translateX(0);
+  transition: transform 680ms cubic-bezier(0.16, 0.8, 0.2, 1);
 }
 
-.section-media {
-  display: block;
-  height: 360px;
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(22px, 4vw, 42px);
   overflow: hidden;
-  border-radius: 8px;
-  background: #172033;
+  color: #ffffff;
 }
 
-.section-media img {
-  display: block;
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(9, 13, 22, 0.86) 0%, rgba(9, 13, 22, 0.5) 42%, rgba(9, 13, 22, 0.12) 100%),
+    linear-gradient(to top, rgba(9, 13, 22, 0.82), transparent 55%);
+}
+
+.carousel-slide img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 700ms ease;
+  z-index: 0;
+  transform: scale(1.02);
 }
 
-.showcase-section:hover .section-media img {
-  transform: scale(1.035);
+.carousel-slide > span,
+.carousel-slide > strong,
+.carousel-slide > em {
+  position: relative;
+  z-index: 2;
 }
 
-.section-copy {
-  min-width: 0;
+.slide-kicker {
+  color: #f2c94c;
 }
 
-.section-number {
+.carousel-slide strong {
+  max-width: 620px;
+  margin-top: 10px;
+  font-size: clamp(2.5rem, 6vw, 5.8rem);
+  line-height: 0.96;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.carousel-slide em {
+  max-width: 520px;
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 46px;
+  height: 46px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  margin-bottom: 20px;
-  border: 1px solid currentColor;
+  border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 50%;
-  color: var(--muted);
-  font-size: 18px;
-  font-weight: 900;
+  background: rgba(8, 12, 20, 0.58);
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
 }
 
-.section-copy h2 {
-  margin: 8px 0 12px;
-  font-size: clamp(2rem, 4.6vw, 4.6rem);
+.carousel-control:hover {
+  background: rgba(8, 12, 20, 0.84);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.carousel-control-prev {
+  left: 18px;
+}
+
+.carousel-control-next {
+  right: 18px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  z-index: 6;
+  display: flex;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.48);
+  cursor: pointer;
+}
+
+.carousel-indicators button.is-active {
+  background: #ffffff;
+}
+
+.carousel-copy-below {
+  width: min(920px, 100%);
+  margin: 6px auto 0;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 22px 56px rgba(22, 32, 51, 0.08);
+  text-align: center;
+}
+
+.carousel-copy-below h2 {
+  margin: 12px auto 20px;
+  max-width: 760px;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
   line-height: 1;
   letter-spacing: 0;
 }
 
-.section-copy p:not(.sport-tag) {
-  max-width: 520px;
+.carouselSignature {
   margin: 0;
-  color: var(--muted);
-  font-size: 17px;
-  font-weight: 600;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 42px;
-  margin-top: 24px;
-  padding: 0 18px;
-  border-radius: 6px;
-  color: #ffffff;
-  background: var(--teal);
+.carouselSignature p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: clamp(1.35rem, 3vw, 2.4rem);
+  line-height: 1.18;
+  font-weight: 900;
+}
+
+.carouselSignature cite {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-style: normal;
   font-weight: 800;
 }
 
-.button:hover {
-  background: #115e59;
-}
-
-.section-kobe {
-  border-left: 8px solid var(--purple);
-}
-
-.section-pingpong {
-  border-left: 8px solid var(--red);
-}
-
-.section-volleyball {
-  border-left: 8px solid var(--gold);
-}
-
-.section-football {
-  border-left: 8px solid var(--blue);
-}
-
-.section-kobe .button,
-.section-kobe .sport-tag {
-  background: rgba(107, 33, 168, 0.1);
-  color: var(--purple);
-}
-
-.section-kobe .button {
-  color: #ffffff;
-  background: var(--purple);
-}
-
-.section-pingpong .button,
-.section-pingpong .sport-tag {
-  background: rgba(220, 38, 38, 0.1);
-  color: var(--red);
-}
-
-.section-pingpong .button {
-  color: #ffffff;
-  background: var(--red);
-}
-
-.section-volleyball .button,
-.section-volleyball .sport-tag {
-  background: rgba(217, 154, 34, 0.14);
-  color: #9a6700;
-}
-
-.section-volleyball .button {
-  color: #172033;
-  background: #f5c451;
-}
-
-.section-football .button,
-.section-football .sport-tag {
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--blue);
-}
-
-.section-football .button {
-  color: #ffffff;
-  background: var(--blue);
-}
-
-.sport-tag {
-  display: inline-flex;
-  min-height: 28px;
-  align-items: center;
-  padding: 4px 10px;
-  border-radius: 4px;
+.signature-note {
+  max-width: 760px;
+  margin: 22px auto 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .site-footer {
@@ -290,31 +336,13 @@ img {
   margin: 0;
 }
 
-.reveal-section {
-  opacity: 0;
-  transform: translateY(26px);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease;
-}
-
-.reveal-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (max-width: 860px) {
-  .showcase-section,
-  .showcase-section:nth-child(even) {
+@media (max-width: 920px) {
+  .hero-carousel {
     grid-template-columns: 1fr;
   }
 
-  .showcase-section:nth-child(even) .section-media {
-    order: initial;
-  }
-
-  .section-media {
-    height: 320px;
+  .carousel-shell {
+    min-height: min(68vh, 620px);
   }
 }
 
@@ -329,31 +357,61 @@ img {
     width: min(100% - 24px, 1180px);
   }
 
-  .home-intro {
-    min-height: auto;
-    padding: 54px 0 28px;
+  .home-hero {
+    min-height: calc(100vh - 96px);
+    gap: 16px;
+    padding: 20px 0 34px;
   }
 
-  .home-intro h1 {
-    font-size: clamp(2.1rem, 12vw, 3.7rem);
+  .hero-copy {
+    padding: 0;
   }
 
-  .home-intro p:last-child,
-  .section-copy p:not(.sport-tag) {
+  .hero-copy h1 {
+    font-size: clamp(1.8rem, 8.4vw, 2.8rem);
+    word-break: break-all;
+  }
+
+  .hero-copy p:last-child {
     font-size: 16px;
   }
 
-  .showcase-section {
-    min-height: 0;
-    padding: 16px;
+  .carousel-shell {
+    min-height: min(58vh, 520px);
   }
 
-  .section-media {
-    height: 260px;
+  .carousel-copy-below {
+    margin-top: 0;
+    padding: 22px 18px;
   }
 
-  .section-copy h2 {
-    font-size: clamp(1.9rem, 10vw, 3rem);
+  .carousel-slide {
+    padding: 22px 18px 58px;
+  }
+
+  .carousel-slide strong {
+    font-size: clamp(2.1rem, 11vw, 3.4rem);
+  }
+
+  .carousel-control {
+    top: auto;
+    bottom: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    transform: none;
+  }
+
+  .carousel-control:hover {
+    transform: scale(1.04);
+  }
+
+  .carousel-control-prev {
+    left: 16px;
+  }
+
+  .carousel-control-next {
+    right: 16px;
   }
 }
 
@@ -363,10 +421,5 @@ img {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 1ms !important;
-  }
-
-  .reveal-section {
-    opacity: 1;
-    transform: none;
   }
 }
