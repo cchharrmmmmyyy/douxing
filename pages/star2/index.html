@@ -3,31 +3,245 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>明星二 | 体育明星馆</title>
+  <title>国乒三重火力 | Table Tennis Poster Issue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header class="page-header">
-    <a class="back-link" href="../../index.html">返回首页</a>
-    <span>明星二展示页</span>
+  <header class="poster-header">
+    <a class="poster-brand" href="../../index.html">体育明星首页</a>
+    <nav class="poster-nav" aria-label="页面导航">
+      <a href="../../index.html">首页</a>
+      <a href="#story">封面故事</a>
+      <a href="#cast">三位主角</a>
+      <a href="#arsenal">技术火力</a>
+      <a href="#gallery">海报相册</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">Star Profile</p>
-        <h1>明星姓名</h1>
-        <p>这里填写运动项目、个人标语或一句简介。</p>
+  <main class="poster-page">
+    <section class="magazine-cover" aria-labelledby="cover-title">
+      <div class="cover-grid" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="cover-copy">
+        <p class="issue-label">TABLE TENNIS SPECIAL / 2026</p>
+        <h1 id="cover-title">国乒三重火力</h1>
+        <p class="cover-deck">速度、旋转、相持、关键分爆发。樊振东、马龙、张继科把中国男子乒乓球的三种锋芒，压进同一张赛场海报。</p>
+        <div class="cover-actions" aria-label="封面关键词">
+          <span>Speed</span>
+          <span>Spin</span>
+          <span>Rally</span>
+          <span>Clutch</span>
+        </div>
+      </div>
+
+      <div class="cover-collage" aria-label="三位乒乓球运动员海报拼贴">
+        <figure class="poster-photo photo-fzd" data-player-photo="fzd">
+          <img src="./assets/fan-zhendong-1.png" alt="樊振东在赛场庆祝">
+          <figcaption>Fan Zhendong</figcaption>
+        </figure>
+        <figure class="poster-photo photo-ml" data-player-photo="ml">
+          <img src="./assets/ma-long-1.png" alt="马龙穿红色球衣庆祝">
+          <figcaption>Ma Long</figcaption>
+        </figure>
+        <figure class="poster-photo photo-zjk" data-player-photo="zjk">
+          <img src="./assets/zhang-jike-1.png" alt="张继科黑色球衣呐喊">
+          <figcaption>Zhang Jike</figcaption>
+        </figure>
+        <span class="collage-sticker">11 : 09</span>
+        <span class="spin-line spin-line-one"></span>
+        <span class="spin-line spin-line-two"></span>
+      </div>
+
+      <aside class="issue-strip" aria-label="封面数据">
+        <div>
+          <span>Issue</span>
+          <strong>02</strong>
+        </div>
+        <div>
+          <span>Sport</span>
+          <strong>Table Tennis</strong>
+        </div>
+        <div>
+          <span>Theme</span>
+          <strong>Hot Rally</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section cover-story" id="story">
+      <div class="section-mark">封面故事</div>
+      <div class="story-board">
+        <article class="story-lead">
+          <span>Cover Story</span>
+          <h2>一颗球从发球台弹起，三种胜负气质同时出现。</h2>
+        </article>
+        <article>
+          <p>乒乓球的速度太快，快到观众常常来不及拆解每一次选择。顶级球员真正可怕的地方，是在半秒之内完成判断：转与不转、抢与不抢、相持还是一板结束。</p>
+          <p>樊振东像不断加压的重拍，马龙像完整而冷静的解题系统，张继科则把大赛压力变成突然爆开的锋芒。这一页不做传统人物传记，而是把三位冠军放进同一张高能封面。</p>
+        </article>
       </div>
     </section>
 
-    <section class="content-grid">
-      <article><h2>基本信息</h2><p>填写国籍、出生年份、运动项目、所属队伍等内容。</p></article>
-      <article><h2>代表成就</h2><p>填写冠军、纪录、奖项或重要比赛成绩。</p></article>
-      <article><h2>高光时刻</h2><p>可以放时间线、图片展示或一场代表性比赛。</p></article>
-      <article><h2>个人评价</h2><p>写出选择这位明星的原因，以及他/她带来的启发。</p></article>
+    <section class="section cast-section" id="cast">
+      <div class="section-heading">
+        <span class="section-mark">三位主角</span>
+        <h2>三种打法，三种镜头语言。</h2>
+      </div>
+
+      <div class="player-tabs" role="tablist" aria-label="选择运动员">
+        <button type="button" class="player-tab is-active" data-player="fzd" role="tab" aria-selected="true">樊振东</button>
+        <button type="button" class="player-tab" data-player="ml" role="tab" aria-selected="false">马龙</button>
+        <button type="button" class="player-tab" data-player="zjk" role="tab" aria-selected="false">张继科</button>
+      </div>
+
+      <div class="cast-grid">
+        <article class="player-panel is-active" data-player-card="fzd">
+          <img src="./assets/fan-zhendong-2.png" alt="樊振东握拳庆祝">
+          <div>
+            <span>Power Rally</span>
+            <h3>樊振东：相持深处的压迫感</h3>
+            <p>正反手质量厚，连续进攻能力强。越到高强度对抗，他越能把每一板球压进对手最难受的位置。</p>
+          </div>
+        </article>
+        <article class="player-panel" data-player-card="ml">
+          <img src="./assets/ma-long-2.png" alt="马龙蓝色球衣庆祝">
+          <div>
+            <span>Complete System</span>
+            <h3>马龙：把比赛拆成可控答案</h3>
+            <p>衔接、控制、变线和关键分处理几乎没有短板。他的强大不只在进攻，更在每一板之前的选择。</p>
+          </div>
+        </article>
+        <article class="player-panel" data-player-card="zjk">
+          <img src="./assets/zhang-jike-2.png" alt="张继科与观众互动庆祝">
+          <div>
+            <span>Big Match Spark</span>
+            <h3>张继科：越大的舞台，越锋利的出手</h3>
+            <p>反手拧拉、抢攻和庆祝动作都极具辨识度。他把关键分打成记忆点，也把压力打成冲击力。</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section arsenal-section" id="arsenal">
+      <div class="section-heading">
+        <span class="section-mark">技术火力</span>
+        <h2>不是一板快，是每一板都在逼迫选择。</h2>
+      </div>
+      <div class="arsenal-grid">
+        <article>
+          <span>01</span>
+          <h3>发接发</h3>
+          <p>短球控制、旋转判断、前三板抢位，是整场比赛的第一道节奏开关。</p>
+          <div class="power-bar"><span style="--power: 86%"></span></div>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>正反手衔接</h3>
+          <p>从防守转进攻只需要一拍，身体重心和线路选择决定能不能接管回合。</p>
+          <div class="power-bar"><span style="--power: 92%"></span></div>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>相持抗压</h3>
+          <p>比分胶着时，谁还能保持击球质量，谁就能把对手拖进自己的节奏。</p>
+          <div class="power-bar"><span style="--power: 95%"></span></div>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>关键分爆发</h3>
+          <p>冠军的标志不是没有压力，而是能在压力最大的一分里主动出手。</p>
+          <div class="power-bar"><span style="--power: 89%"></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section rally-section">
+      <div class="section-heading">
+        <span class="section-mark">高光回合</span>
+        <h2>把时间压缩成几次弹跳。</h2>
+      </div>
+      <div class="rally-stack">
+        <article>
+          <span>Rally 01</span>
+          <h3>樊振东：用厚度把相持拉满</h3>
+          <p>连续对拉里保持深度和质量，把看似五五开的回合变成更习惯、更能承受的节奏。</p>
+        </article>
+        <article>
+          <span>Rally 02</span>
+          <h3>马龙：在乱局里找到最稳线路</h3>
+          <p>他可以用控制建立优势，也可以用变化打乱对手，在关键分里选择最可靠的一条线。</p>
+        </article>
+        <article>
+          <span>Rally 03</span>
+          <h3>张继科：一板把舞台点燃</h3>
+          <p>大赛气质鲜明，反手、拧拉、抢攻和瞬间爆发，让高光时刻带着强烈个人风格。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section poster-gallery" id="gallery">
+      <div class="section-heading">
+        <span class="section-mark">海报相册</span>
+        <h2>把比赛瞬间贴成一面冠军墙。</h2>
+      </div>
+      <div class="gallery-masonry">
+        <figure class="gallery-card gallery-card-large">
+          <img src="./assets/fan-zhendong-4.png" alt="樊振东张开双臂庆祝胜利">
+          <figcaption>巴黎时刻</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="./assets/fan-zhendong-3.png" alt="樊振东近景庆祝">
+          <figcaption>关键分表情</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="./assets/ma-long-3.png" alt="马龙在赛场准备比赛">
+          <figcaption>大场面控制</figcaption>
+        </figure>
+        <figure class="gallery-card gallery-card-wide">
+          <img src="./assets/zhang-jike-3.png" alt="张继科红色球衣俯冲进攻">
+          <figcaption>俯冲进攻</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="./assets/ma-long-1.png" alt="马龙红色球衣庆祝">
+          <figcaption>龙队时刻</figcaption>
+        </figure>
+        <figure class="gallery-card">
+          <img src="./assets/zhang-jike-1.png" alt="张继科黑色球衣庆祝">
+          <figcaption>锋芒释放</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section closing-section">
+      <div class="section-heading">
+        <span class="section-mark">关键词收束</span>
+        <h2>这一页的关键词，不是模板，是球速。</h2>
+      </div>
+      <div class="keyword-grid" aria-label="乒乓球主题关键词">
+        <span>奥运冠军</span>
+        <span>世界冠军</span>
+        <span>国乒男队</span>
+        <span>速度</span>
+        <span>旋转</span>
+        <span>相持</span>
+        <span>关键分</span>
+        <span>爆发力</span>
+      </div>
     </section>
   </main>
+
+  <footer class="poster-footer">
+    <p>体育明星首页 | 页面二：乒乓球杂志海报专题</p>
+    <a href="../../index.html">返回主页面</a>
+  </footer>
 
   <script src="./script.js"></script>
 </body>
