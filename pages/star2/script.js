@@ -1,17 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const revealSections = document.querySelectorAll(".section");
+  const revealTargets = document.querySelectorAll(".magazine-cover, .section");
   const staggerGroups = [
-    ".fact-strip",
-    ".icon-grid",
-    ".highlight-grid",
-    ".chapter-list",
-    ".timeline-track",
-    ".gallery-layout",
-    ".honors-wall"
+    ".cover-actions",
+    ".issue-strip",
+    ".story-board",
+    ".player-tabs",
+    ".cast-grid",
+    ".arsenal-grid",
+    ".rally-stack",
+    ".gallery-masonry",
+    ".keyword-grid"
   ];
 
-  revealSections.forEach((section) => {
-    section.classList.add("reveal");
+  revealTargets.forEach((target) => {
+    target.classList.add("reveal");
   });
 
   staggerGroups.forEach((selector) => {
@@ -33,10 +35,39 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.16,
+      threshold: 0.14,
       rootMargin: "0px 0px -80px 0px"
     }
   );
 
-  revealSections.forEach((section) => observer.observe(section));
+  revealTargets.forEach((target) => observer.observe(target));
+
+  const tabs = document.querySelectorAll("[data-player]");
+  const cards = document.querySelectorAll("[data-player-card]");
+  const collage = document.querySelector(".cover-collage");
+  const castGrid = document.querySelector(".cast-grid");
+
+  const activatePlayer = (player) => {
+    tabs.forEach((tab) => {
+      const isActive = tab.dataset.player === player;
+      tab.classList.toggle("is-active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    cards.forEach((card) => {
+      card.classList.toggle("is-active", card.dataset.playerCard === player);
+    });
+
+    if (collage) {
+      collage.dataset.active = player;
+    }
+
+    if (castGrid) {
+      castGrid.classList.add("has-active");
+    }
+  };
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activatePlayer(tab.dataset.player));
+  });
 });
