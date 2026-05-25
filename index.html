@@ -10,82 +10,74 @@
   <header class="site-header">
     <nav class="nav-bar" aria-label="主导航">
       <a class="brand" href="./index.html">体育明星首页</a>
+      <div class="nav-links">
+        <a href="#section-kobe">篮球</a>
+        <a href="#section-pingpong">乒乓球</a>
+        <a href="#section-volleyball">排球</a>
+        <a href="#section-football">足球</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero carousel" id="heroCarousel">
-      <div class="carousel-track" id="carouselTrack">
-        <a class="carousel-slide" href="./pages/zy/kobe.html">
-          <img src="./picture/kebi.jpg" alt="科比布莱恩特">
-        </a>
-        <a class="carousel-slide" href="./pages/star2/index.html">
-          <img src="./pages/star2/assets/fan-zhendong-1.png" alt="乒乓球三巨星">
-        </a>
-        <a class="carousel-slide" href="./pages/star3/index.html">
-          <img src="./picture/zhu-ting.jpg" alt="朱婷">
-        </a>
-        <a class="carousel-slide" href="./pages/star4/index.html">
-          <img src="./pages/star4/assets/haaland-100-photos-poster.webp" alt="埃尔林·哈兰德">
-        </a>
-      </div>
-      <div class="carousel-indicators" id="carouselIndicators"></div>
+  <main class="home-shell">
+    <section class="home-intro" aria-labelledby="home-title">
+      <p class="eyebrow">Team Showcase</p>
+      <h1 id="home-title">四个前端页面，四种体育明星表达。</h1>
+      <p>从篮球传奇到国乒海报，从排球主攻到足球前锋，主页改成四段式入口，展示时能直接看到每个同学负责的主题。</p>
     </section>
 
-    <section class="section-wrap" aria-labelledby="gallery-title">
-      <div class="section-heading">
-        <p class="eyebrow">Choose A Page</p>
-        <h2 id="gallery-title">体育明星</h2>
-      </div>
-      <div class="star-grid">
-        <article class="star-card">
-          <div class="card-media">
-            <img src="./picture/kebi.jpg" alt="科比布莱恩特" loading="lazy">
-          </div>
-          <div class="card-body">
-            <p class="sport-tag">篮球</p>
-            <h3>科比·布莱恩特</h3>
-            <p>篮球传奇巨星，以曼巴精神和极致竞争力影响无数球迷。</p>
-            <a class="button" href="./pages/zy/kobe.html">进入页面</a>
-          </div>
-        </article>
+    <section class="showcase-sections" aria-label="四个体育明星页面入口">
+      <article class="showcase-section section-kobe" id="section-kobe">
+        <a class="section-media" href="./pages/zy/kobe.html" aria-label="进入科比页面">
+          <img src="./picture/kebi.jpg" alt="科比布莱恩特">
+        </a>
+        <div class="section-copy">
+          <span class="section-number">01</span>
+          <p class="sport-tag">篮球</p>
+          <h2>科比·布莱恩特</h2>
+          <p>曼巴精神、关键球、冠军记忆。这个页面聚焦篮球传奇的个人气质和赛场影响力。</p>
+          <a class="button" href="./pages/zy/kobe.html">进入页面</a>
+        </div>
+      </article>
 
-        <article class="star-card">
-          <div class="card-media">
-            <img src="./pages/star2/assets/fan-zhendong-1.png" alt="乒乓球三巨星" loading="lazy">
-          </div>
-          <div class="card-body">
-            <p class="sport-tag">乒乓球</p>
-            <h3>乒乓球三巨星</h3>
-            <p>樊振东、马龙、张继科：速度、旋转、意志和国乒传承的三种表达。</p>
-            <a class="button" href="./pages/star2/index.html">进入页面</a>
-          </div>
-        </article>
+      <article class="showcase-section section-pingpong" id="section-pingpong">
+        <a class="section-media" href="./pages/star2/index.html" aria-label="进入乒乓球页面">
+          <img src="./pages/star2/assets/fan-zhendong-1.png" alt="樊振东乒乓球主题图">
+        </a>
+        <div class="section-copy">
+          <span class="section-number">02</span>
+          <p class="sport-tag">乒乓球</p>
+          <h2>国乒三重火力</h2>
+          <p>樊振东、马龙、张继科同框呈现，强调速度、旋转、相持和关键分爆发。</p>
+          <a class="button" href="./pages/star2/index.html">进入页面</a>
+        </div>
+      </article>
 
-        <article class="star-card">
-          <div class="card-media">
-            <img src="./picture/zhu-ting.jpg" alt="朱婷" loading="lazy">
-          </div>
-          <div class="card-body">
-            <p class="sport-tag">排球</p>
-            <h3>朱婷</h3>
-            <p>中国女子排球运动员，被誉为世界排坛最具统治力的主攻手之一。</p>
-            <a class="button" href="./pages/star3/index.html">进入页面</a>
-          </div>
-        </article>
+      <article class="showcase-section section-volleyball" id="section-volleyball">
+        <a class="section-media" href="./pages/star3/index.html" aria-label="进入朱婷页面">
+          <img src="./picture/zhu-ting.jpg" alt="朱婷">
+        </a>
+        <div class="section-copy">
+          <span class="section-number">03</span>
+          <p class="sport-tag">排球</p>
+          <h2>朱婷</h2>
+          <p>中国女排主攻手，页面突出力量、拦防、团队气质和世界赛场上的稳定表现。</p>
+          <a class="button" href="./pages/star3/index.html">进入页面</a>
+        </div>
+      </article>
 
-        <article class="star-card">
-          <div class="card-media">
-            <img src="./pages/star4/assets/aaaaaaaassss2.jpg" alt="埃尔林·哈兰德" loading="lazy">
-          </div>
-          <div class="card-body">
-            <p class="sport-tag">足球</p>
-            <h3>埃尔林·哈兰德</h3>
-            <p>挪威顶级前锋，曼城当家射手，以高效进球能力著称。</p>
-            <a class="button" href="./pages/star4/index.html">进入页面</a>
-          </div>
-        </article>
-      </div>
+      <article class="showcase-section section-football" id="section-football">
+        <a class="section-media" href="./pages/star4/index.html" aria-label="进入哈兰德页面">
+          <img src="./pages/star4/assets/haaland-100-photos-poster.webp" alt="埃尔林·哈兰德">
+        </a>
+        <div class="section-copy">
+          <span class="section-number">04</span>
+          <p class="sport-tag">足球</p>
+          <h2>埃尔林·哈兰德</h2>
+          <p>现代中锋、速度冲击、禁区终结。页面以球员档案和数据叙事呈现锋线效率。</p>
+          <a class="button" href="./pages/star4/index.html">进入页面</a>
+        </div>
+      </article>
     </section>
   </main>
 
