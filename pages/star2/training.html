@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术火力 | 国乒三重火力</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="poster-header">
+    <a class="poster-brand" href="./index.html">国乒三重火力</a>
+    <nav class="poster-nav" aria-label="乒乓球专题导航">
+      <a href="./index.html">首页</a>
+      <a href="./index.html#players">运动员</a>
+      <a class="is-current" href="./training.html">技术</a>
+      <a href="./moments.html">名场面</a>
+      <a href="./gear.html">装备</a>
+    </nav>
+  </header>
+
+  <main class="poster-page">
+    <section class="subpage-hero">
+      <p class="issue-label">Technique</p>
+      <h1>技术火力</h1>
+      <p>把发接发、相持和关键分拆开看，比堆一堆人物介绍更清楚。</p>
+    </section>
+
+    <section class="section arsenal-section" id="arsenal">
+      <div class="section-heading compact-heading">
+        <span class="section-mark">技术火力</span>
+        <h2>不是一板快，是每一板都在逼迫选择。</h2>
+      </div>
+      <div class="tech-switcher" id="techSwitcher" role="tablist" aria-label="选择技术火力"></div>
+      <div class="arsenal-grid">
+        <article data-tech-card="serve">
+          <span>01</span>
+          <h3>发接发</h3>
+          <p>短球控制、旋转判断、前三板抢位，是整场比赛的第一道节奏开关。</p>
+          <div class="power-bar"><span style="--power: 86%"></span></div>
+        </article>
+        <article data-tech-card="link">
+          <span>02</span>
+          <h3>正反手衔接</h3>
+          <p>从防守转进攻只需要一拍，身体重心和线路选择决定能不能接管回合。</p>
+          <div class="power-bar"><span style="--power: 92%"></span></div>
+        </article>
+        <article data-tech-card="rally">
+          <span>03</span>
+          <h3>相持抗压</h3>
+          <p>比分胶着时，谁还能保持击球质量，谁就能把对手拖进自己的节奏。</p>
+          <div class="power-bar"><span style="--power: 95%"></span></div>
+        </article>
+        <article data-tech-card="clutch">
+          <span>04</span>
+          <h3>关键分爆发</h3>
+          <p>冠军的标志不是没有压力，而是能在压力最大的一分里主动出手。</p>
+          <div class="power-bar"><span style="--power: 89%"></span></div>
+        </article>
+      </div>
+      <p class="tech-note" id="techNote" aria-live="polite"></p>
+    </section>
+
+    <section class="section rally-simulator-section" id="simulator">
+      <div class="section-heading compact-heading">
+        <span class="section-mark">回合模拟</span>
+        <h2>点一次按钮，让小球完成一次战术选择。</h2>
+      </div>
+      <div class="simulator-layout">
+        <div class="table-simulator" aria-label="国乒回合模拟球台">
+          <div class="score-board">
+            <div><span>China</span><strong id="chinaScore">0</strong></div>
+            <div><span>Opponent</span><strong id="opponentScore">0</strong></div>
+          </div>
+          <div class="ping-table" id="pingTable">
+            <span class="table-net"></span>
+            <span class="ping-ball" id="pingBall"></span>
+          </div>
+        </div>
+        <div class="simulator-controls">
+          <p class="simulator-status" id="simulatorStatus">点击“发球”开始一分，观察球路和比分变化。</p>
+          <div class="rally-buttons" id="rallyButtons"></div>
+          <button class="simulator-reset" id="simulatorReset" type="button">重置比分</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rally-section">
+      <div class="section-heading compact-heading">
+        <span class="section-mark">高光回合</span>
+        <h2>三个回合，三种赢法。</h2>
+      </div>
+      <div class="rally-stack">
+        <article><span>Rally 01</span><h3>樊振东：用厚度把相持拉满</h3><p>连续对拉里保持深度和质量，把看似五五开的回合变成更习惯的节奏。</p></article>
+        <article><span>Rally 02</span><h3>马龙：在乱局里找到最稳线路</h3><p>用控制建立优势，也用变化打乱对手，在关键分里选择最可靠的一条线。</p></article>
+        <article><span>Rally 03</span><h3>张继科：一板把舞台点燃</h3><p>反手、拧拉、抢攻和瞬间爆发，让高光时刻带着强烈个人风格。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="poster-footer">
+    <p>国乒三重火力 | 技术页</p>
+    <a href="./index.html">返回乒乓球主页</a>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

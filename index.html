@@ -60,17 +60,37 @@
 
         <button class="carousel-control carousel-control-prev" id="carouselPrev" type="button" aria-label="上一张">‹</button>
         <button class="carousel-control carousel-control-next" id="carouselNext" type="button" aria-label="下一张">›</button>
+        <button class="carousel-toggle" id="carouselToggle" type="button" aria-label="暂停轮播">暂停</button>
         <div class="carousel-indicators" id="carouselIndicators" aria-label="轮播指示器"></div>
       </div>
     </section>
 
     <section class="carousel-copy-below" aria-labelledby="carousel-title">
       <p class="eyebrow" id="carousel-title">Featured Pages</p>
+      <div class="active-profile" id="activeProfile" aria-live="polite"></div>
       <blockquote class="carouselSignature" id="carouselSignature">
         <p>“The purpose of life is to be defeated by greater and greater things.”</p>
         <cite>Rainer Maria Rilke</cite>
       </blockquote>
       <p class="signature-note">这四个人的共同点，不只是赢。他们都曾被更大的赛场、更重的期待、更难的局面击中，然后把自己锻造成另一种形状。</p>
+    </section>
+
+    <section class="home-panel ability-section" aria-labelledby="ability-title">
+      <div class="section-title-row">
+        <p class="eyebrow">Ability Compare</p>
+        <h2 id="ability-title">四位运动员能力对比</h2>
+      </div>
+      <div class="ability-tabs" id="abilityTabs" role="tablist" aria-label="选择能力项目"></div>
+      <div class="ability-board" id="abilityBoard"></div>
+      <p class="ability-note" id="abilityNote" aria-live="polite"></p>
+    </section>
+
+    <section class="home-panel quiz-section" aria-labelledby="quiz-title">
+      <div class="section-title-row">
+        <p class="eyebrow">Personality Quiz</p>
+        <h2 id="quiz-title">你是哪种运动员气质？</h2>
+      </div>
+      <div class="quiz-card" id="quizCard"></div>
     </section>
   </main>
 
