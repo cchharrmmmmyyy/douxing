@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>装备选择器 | 国乒三重火力</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="poster-header">
+    <a class="poster-brand" href="./index.html">国乒三重火力</a>
+    <nav class="poster-nav" aria-label="乒乓球专题导航">
+      <a href="./index.html">首页</a>
+      <a href="./index.html#players">运动员</a>
+      <a href="./training.html">技术</a>
+      <a href="./moments.html">名场面</a>
+      <a class="is-current" href="./gear.html">装备</a>
+    </nav>
+  </header>
+
+  <main class="profile-main">
+    <section class="profile-hero gear-hero">
+      <div class="profile-copy">
+        <p class="issue-label">Gear Picker / 2026</p>
+        <h1>装备选择器</h1>
+        <p>同款球拍很帅，但不一定适合每个人。这个页面先按水平、打法和预算给一个方向，适合课堂展示，也适合新手大概看懂装备差别。</p>
+        <div class="profile-actions">
+          <a href="./index.html">返回专题首页</a>
+          <a href="#picker">开始选择</a>
+        </div>
+      </div>
+      <div class="gear-hero-visual" aria-hidden="true">
+        <div class="gear-visual large"><img src="./assets/gear/fan-zhendong-alc.jpg" alt="" loading="lazy"><span>ALC</span></div>
+        <div class="gear-visual is-ball"><img src="./assets/gear/table-tennis-ball.png" alt="" loading="lazy"><span>40+</span></div>
+      </div>
+    </section>
+
+    <section class="section gear-picker-section" id="picker">
+      <div class="section-heading">
+        <span class="section-mark">先选打法</span>
+        <h2>不用懂太多参数，先选自己是哪类打法。</h2>
+      </div>
+      <div class="gear-picker" aria-label="装备推荐选择器">
+        <div class="gear-option-group" data-gear-group="level">
+          <span>水平</span>
+          <button class="is-active" type="button" data-value="beginner">新手</button>
+          <button type="button" data-value="intermediate">进阶</button>
+          <button type="button" data-value="advanced">高阶</button>
+        </div>
+        <div class="gear-option-group" data-gear-group="style">
+          <span>打法</span>
+          <button class="is-active" type="button" data-value="control">控制</button>
+          <button type="button" data-value="loop">弧圈</button>
+          <button type="button" data-value="fast">快攻</button>
+        </div>
+        <div class="gear-option-group" data-gear-group="budget">
+          <span>预算</span>
+          <button class="is-active" type="button" data-value="low">省钱</button>
+          <button type="button" data-value="mid">中等</button>
+          <button type="button" data-value="high">充足</button>
+        </div>
+      </div>
+      <div class="gear-result" id="gearResult" aria-live="polite"></div>
+    </section>
+
+    <section class="section" id="star-gear">
+      <div class="section-heading">
+        <span class="section-mark">明星同款方向</span>
+        <h2>同款可以参考，但别盲买。</h2>
+      </div>
+      <div class="gear-grid" id="starGearGrid"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <span class="section-mark">普通推荐</span>
+        <h2>大多数人先从好控制的配置开始更稳。</h2>
+      </div>
+      <div class="gear-grid" id="normalGearGrid"></div>
+    </section>
+
+    <section class="section" id="balls">
+      <div class="section-heading">
+        <span class="section-mark">乒乓球品牌</span>
+        <h2>球也有区别，别只看是不是三星。</h2>
+      </div>
+      <div class="gear-grid ball-grid" id="ballGearGrid"></div>
+    </section>
+  </main>
+
+  <footer class="poster-footer">
+    <p>国乒三重火力 | 装备选择器</p>
+    <a href="./index.html">返回乒乓球主页</a>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
