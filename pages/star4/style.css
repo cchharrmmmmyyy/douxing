@@ -631,6 +631,30 @@ body::before {
   position: relative;
 }
 
+.video-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .photo-placeholder {
   position: absolute;
   padding: 18px;
@@ -690,11 +714,13 @@ body::before {
 }
 
 .photo-placeholder.stagger-child {
-  transform: translateY(28px) rotate(var(--card-rotation, 0deg));
+  opacity: 0;
+  transform: rotateX(90deg);
 }
 
 .is-visible .photo-placeholder.stagger-child {
-  transform: translateY(0) rotate(var(--card-rotation, 0deg));
+  animation: flipReveal 1s cubic-bezier(0.16, 0.8, 0.2, 1) both;
+  animation-delay: calc(var(--stagger-index, 0) * 120ms);
 }
 
 .photo-placeholder-main {
@@ -835,6 +861,20 @@ body::before {
 .site-footer a {
   color: var(--city-blue);
   font-weight: 900;
+}
+
+@keyframes flipReveal {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) rotate(var(--card-rotation, 0deg));
+  }
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) rotate(var(--card-rotation, 0deg));
+  }
 }
 
 @keyframes heroRise {
@@ -1004,9 +1044,12 @@ body::before {
     height: 230px;
   }
 
-  .photo-placeholder.stagger-child,
+  .photo-placeholder.stagger-child {
+    opacity: 1;
+    transform: none;
+  }
   .is-visible .photo-placeholder.stagger-child {
-    transform: translateY(0);
+    animation: none;
   }
 
   .route-track {
