@@ -9,7 +9,7 @@
 <body>
   <div class="page-shell">
     <header class="page-top">
-      <a href="../../index.html" class="home-link">返回首页</a>
+      <a href="#" class="home-link">返回首页</a>
       <span>排球运动明星人物介绍</span>
     </header>
 
@@ -26,6 +26,21 @@
             <span>世界杯冠军</span>
             <span>中国女排精神</span>
           </div>
+
+          <div class="hero-stats" aria-label="朱婷核心信息">
+            <div>
+              <strong>主攻手</strong>
+              <span>场上位置</span>
+            </div>
+            <div>
+              <strong>中国女排</strong>
+              <span>代表队伍</span>
+            </div>
+            <div>
+              <strong>河南周口</strong>
+              <span>成长起点</span>
+            </div>
+          </div>
         </div>
 
         <div class="hero-photo">
@@ -33,7 +48,15 @@
         </div>
       </section>
 
-      <section class="info-panel">
+      <nav class="section-nav" aria-label="朱婷页面栏目导航">
+        <a href="#intro">个人简介</a>
+        <a href="#basic">基本资料</a>
+        <a href="#achievement">代表成就</a>
+        <a href="#timeline">高光时刻</a>
+        <a href="#spirit">人物精神</a>
+      </nav>
+
+      <section class="info-panel" id="intro">
         <h2>个人简介</h2>
         <p>
           朱婷，1994年11月29日出生于河南省周口市郸城县，中国女子排球运动员，场上位置为主攻手。她从基层训练一路成长为国家队核心球员，凭借出色的身体条件、进攻能力和比赛阅读能力，在世界女子排坛占据重要位置。
@@ -44,7 +67,7 @@
       </section>
 
       <section class="two-column">
-        <article class="basic-card">
+        <article class="basic-card" id="basic">
           <h2>基本资料</h2>
           <dl>
             <div><dt>姓名</dt><dd>朱婷</dd></div>
@@ -67,29 +90,37 @@
         </article>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="achievement">
         <h2>代表成就</h2>
         <div class="achievement-grid">
           <div class="achievement-card">
             <strong>2015</strong>
             <p>随中国女排获得女排世界杯冠军，并成为球队重要得分点。</p>
+            <button class="more-btn" type="button">查看说明</button>
+            <p class="more-text">这一阶段让朱婷进一步被国际排坛关注，也奠定了她在中国女排进攻体系中的核心位置。</p>
           </div>
           <div class="achievement-card">
             <strong>2016</strong>
             <p>随中国女排获得里约奥运会女排冠军，在关键比赛中发挥突出。</p>
+            <button class="more-btn" type="button">查看说明</button>
+            <p class="more-text">奥运夺冠是她职业生涯的重要高光，也体现了中国女排在逆境中的团队韧性。</p>
           </div>
           <div class="achievement-card">
             <strong>2017</strong>
             <p>随队获得女排大冠军杯冠军，继续保持世界级主攻手水准。</p>
+            <button class="more-btn" type="button">查看说明</button>
+            <p class="more-text">这一成绩说明朱婷在国际大赛中并非短暂爆发，而是持续保持稳定竞技水平。</p>
           </div>
           <div class="achievement-card">
             <strong>2019</strong>
             <p>随中国女排再次获得女排世界杯冠军，展现成熟稳定的竞技状态。</p>
+            <button class="more-btn" type="button">查看说明</button>
+            <p class="more-text">再次夺冠体现了朱婷从核心得分手到成熟领军人物的进一步转变。</p>
           </div>
         </div>
       </section>
 
-      <section class="content-section">
+      <section class="content-section" id="timeline">
         <h2>高光时刻</h2>
         <div class="timeline">
           <div class="timeline-item">
@@ -111,7 +142,7 @@
         </div>
       </section>
 
-      <section class="content-section spirit-section">
+      <section class="content-section spirit-section" id="spirit">
         <h2>人物精神</h2>
         <p>
           朱婷的成功离不开长期训练，也离不开团队配合。排球不是一个人的比赛，主攻手的每一次得分背后，都需要一传、防守、二传和全队战术的支持。她能够在团队中承担核心任务，也能够把个人能力融入整体配合，这正是她的可贵之处。
@@ -122,5 +153,6 @@
       </section>
     </main>
   </div>
+  <script src="./script.js"></script>
 </body>
 </html>
